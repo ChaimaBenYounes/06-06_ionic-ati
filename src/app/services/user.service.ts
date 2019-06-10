@@ -31,7 +31,7 @@ export class UserService {
   }
   public login(user): Observable<any> {
     this.header = new HttpHeaders({'Accept': 'application/json'});
-    return this.http.post('http://127.0.0.1:8000/login_check', user, {headers: this.header });
+    return this.http.post('http://127.0.0.1:8000/api/login_check', user, {headers: this.header });
   }
   public getUser() {
     this.header = new HttpHeaders({'Accept': 'application/json', 'Authorization' : localStorage.getItem('token')});
